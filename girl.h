@@ -13,12 +13,12 @@ class Girl
 		float maintainance;
 		char status;
 		std::string bfname;
-		std::string bfcriterion;
+		int bfcriterion;
 		int type;
 
 	//functions//
 	public:
-		Girl(std::string name, int attractiveness, int intelligence, float budget, std::string criterion, int type);
+		Girl(std::string name, int attractiveness, int intelligence, float budget, int criterion, int type);
 		std::string getname();
 		int getattractiveness();
 		int getintelligence();
