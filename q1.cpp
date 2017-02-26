@@ -1,5 +1,6 @@
 #include "boy.h"
 #include "girl.h"
+#include "couple.h"
 #include "rand_test.h"
 #include "input.h"
 #include <vector>
@@ -10,8 +11,9 @@ int main()
 {
 	std::vector<Boy> b;
 	std::vector<Girl> g;
+	std::vector<Couple> c;
 	rand_test ge;
 	ge.generate(1000,10);
-	getinput(b,g);
+	getinput(b,g,c);
 	return 0;
 }

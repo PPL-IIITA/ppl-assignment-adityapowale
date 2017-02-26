@@ -1,12 +1,13 @@
 #include "input.h"
 #include "boy.h"
 #include "girl.h"
+#include "couple.h"
 
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
 
-void getinput(std::vector<Boy> &b, std::vector<Girl> &g)
+void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c)
 {
 	std::ifstream input;
 	input.open("Boys.csv", std::ios::in);
@@ -95,6 +96,8 @@ void getinput(std::vector<Boy> &b, std::vector<Girl> &g)
 				}
 			}
 		}
+		Couple c1(&temp,&(*i2));
+		c.push_back(c1);
 		std::cout << i2->getname() <<" " << temp.getname() << std::endl;
 	}
 }

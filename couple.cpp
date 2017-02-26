@@ -1,7 +1,7 @@
 #include "couple.h"
 #include "boy.h"
 #include "girl.h"
-#include "gifts.h"
+#include "gift.h"
 #include <string>
 #include <cmath>
 
@@ -38,7 +38,7 @@ float Couple::gethappiness()
 	else if(g.gettype() == 1) {
 		gh = this->spend;
 	}
-	else if(g.gettype() == 2) {
+	else {
 		gh = log10(this->spend);
 	}
 	float bh;
@@ -48,7 +48,7 @@ float Couple::gethappiness()
 	else if(b.gettype() == 1) {
 		bh = gh;
 	}
-	else if(b.gettype() == 2) {
+	else {
 		bh = g.getintelligence();
 	}
 	return (bh+gh);
