@@ -18,6 +18,7 @@ class Girl
 
 	//functions//
 	public:
+		Girl();
 		Girl(std::string name, int attractiveness, int intelligence, float budget, int criterion, int type);
 		std::string getname();
 		int getattractiveness();

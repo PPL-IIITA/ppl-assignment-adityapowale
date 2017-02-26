@@ -1,6 +1,9 @@
 #include "girl.h"
 #include <string.h>
 
+Girl::Girl()
+{
+}
 Girl::Girl(std::string name, int attractiveness, int intelligence, float budget, int  criteria, int type)
 {
 	this->name = name;
