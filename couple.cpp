@@ -10,7 +10,7 @@ Couple::Couple()
 {
 }
 
-bool compareOnhappy(Couple c1 , Couple c2)
+bool compareOnHappy(Couple c1 , Couple c2)
 {
 	return (c1.happy > c2.happy);
 }

@@ -21,7 +21,8 @@ int main(int argc,char **argv)
 	int k = atoi(argv[1]);
 	getinput(b,g,c,gi);
 	std::vector<Couple>::iterator it1;
-	std::vector<Gift>::iterator it2;
+	std::vector<Gift>::iterator it2,it3;
+	cout<<"GIFTS EXCHANGED "<<endl;
 	for(it1 = c.begin() ; it1 != c.end() ; it1++) {
 		float temp = 0 , expense = 0;
 		std::vector<Gift> gifts;
@@ -44,24 +45,27 @@ int main(int argc,char **argv)
 		else {
 			it1->setspend((float)temp);
 		}
+		cout<<it1->g.getname() << " and " << it1->b.getname()<<endl;
+		for(it3 = gifts.begin() ; it3 != gifts.end() ; it3++) {
+			cout<<it3->name<<" value = "<<it3->value << " price = "<<it3->price<<endl;
+		}
+		cout<<endl;
 		it1->savegifts(gifts);
 		it1->gethappiness();
 		it1->getcompatibility();
 	}
-	std::vector<Couple> copy1;
-	std::vector<Couple> copy2;
-	copy1 = c;
-	copy2 = c;
-	std::sort(copy1.begin(),copy2.end(),compareOnHappy);
-	std::sort(copy2.begin(),copy2.end(),compareOnCompat);
+	std::sort(c.begin(),c.end(),compareOnHappy);
 	cout<<"K Happiest Couples are"<<endl;
 	int j;
 	for(j = 0 ; j < k ; j++) {
-		cout<<copy1[j].g.getname()<<" and "<<copy1[j].b.getname()<< " Happiness = "<<copy1[j].happy<<endl;
+		cout<<c[j].g.getname()<<" and "<<c[j].b.getname()<< " Happiness = "<<c[j].happy<<endl;
 	}
+	cout<<endl;
+	cout<<endl;
+	std::sort(c.begin(),c.end(),compareOnCompat);
 	cout<<"K Most Compatible couples"<<endl;
 	for(j = 0 ; j < k ; j++) {
-		cout<<copy2[j].g.getname()<<" and "<<copy2[j].b.getname()<< " Happiness = "<<copy1[j].compat<<endl;
+		cout<<c[j].g.getname()<<" and "<<c[j].b.getname()<< " Happiness = "<<c[j].compat<<endl;
 	}
 	return 0;
 }

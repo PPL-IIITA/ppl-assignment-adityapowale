@@ -119,18 +119,4 @@ void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c 
 		c.push_back(c1);
 		std::cout << i2->getname() <<" " << temp.getname() << std::endl;
 	}
-	std::ofstream myfile;
-	myfile.open("Output1.csv");
-	std::vector<Couple>::iterator itc;
-
-	for (itc = c.begin(); itc != c.end(); itc++) {
-
-		std::string name1 = itc->g.getname();
-		std::string name2 = itc->b.getname();
-		myfile<<name1<<" is in relation with "<<name2<<"\n";
-
-
-	}
-	myfile.close();
-
 }
