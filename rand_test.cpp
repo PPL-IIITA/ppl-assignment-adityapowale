@@ -54,6 +54,23 @@ void rand_test::generate(int n,int m)  {
 
 	}
 	myfile.close();
+	
+	myfile.open("Gifts.csv");
+
+	for (int i = 0; i < 1000; i++) {
+
+		name = "Gift"+ std::to_string(i+1);
+		type = getRand()%3;
+		budget = getRand();
+		intelligence = getRand();
+
+		myfile<<name<<" , "<<type<<" , "<<intelligence<<" , "<<budget<<"\n";
+
+
+
+	}
+	myfile.close();
+
 
 
 }

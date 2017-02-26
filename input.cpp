@@ -2,12 +2,13 @@
 #include "boy.h"
 #include "girl.h"
 #include "couple.h"
+#include "gift.h"
 
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
 
-void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c)
+void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c , std::vector<Gift> &gi)
 {
 	std::ifstream input;
 	input.open("Boys.csv", std::ios::in);
@@ -43,6 +44,24 @@ void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c)
 	}
 	g.pop_back();
 	input.close();
+
+	input.open("Gifts.csv", std::ios::in);
+
+	while(!input.eof()) {
+		std::string name;
+		std::string ign;
+		int type;
+		int price;
+		int value;
+		input >> name >> ign >> type >> ign >> price >> ign >> value;
+		Gift g1(name,type,price,value);
+		gi.push_back(g1);
+	}
+	gi.pop_back();
+	input.close();
+
+
+
 	std::vector<Boy>::iterator i1;
 	std::vector<Girl>::iterator i2;
 	for(i2 = g.begin() ; i2 != g.end() ; i2++) {
@@ -100,4 +119,18 @@ void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c)
 		c.push_back(c1);
 		std::cout << i2->getname() <<" " << temp.getname() << std::endl;
 	}
+	std::ofstream myfile;
+	myfile.open("Output1.csv");
+	std::vector<Couple>::iterator itc;
+
+	for (itc = c.begin(); itc != c.end(); itc++) {
+
+		std::string name1 = itc->g.getname();
+		std::string name2 = itc->b.getname();
+		myfile<<name1<<" is in relation with "<<name2<<"\n";
+
+
+	}
+	myfile.close();
+
 }

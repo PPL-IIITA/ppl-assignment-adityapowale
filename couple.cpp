@@ -4,12 +4,21 @@
 #include "gift.h"
 #include <string>
 #include <cmath>
-
+#include <vector>
 
 Couple::Couple()
 {
 }
 
+bool compareOnhappy(Couple c1 , Couple c2)
+{
+	return (c1.happy > c2.happy);
+}
+
+bool compareOnCompat(Couple c1 , Couple c2)
+{
+	return (c1.compat > c2.compat);
+}
 
 Couple::Couple(Boy *b ,Girl *g)
 {
@@ -17,11 +26,11 @@ Couple::Couple(Boy *b ,Girl *g)
 	this->g = *g;
 }
 
-void Couple::savegifts(Gift *a,int count)
+void Couple::savegifts(std::vector<Gift> &a)
 {
-	int i;
-	for(i = 0 ; i < count ; i++) {
-		this->gi[i] = a[i];
+	std::vector<Gift>::iterator i;
+	for(i = a.begin() ; i != a.end() ; i++) {
+		this->gifts.push_back(*i);
 	}
 }
 
@@ -51,6 +60,7 @@ float Couple::gethappiness()
 	else {
 		bh = g.getintelligence();
 	}
+	this->happy = bh+gh;
 	return (bh+gh);
 }
 
@@ -60,5 +70,6 @@ float Couple::getcompatibility()
 	r = b.getbudget() - g.getmaintainance_budget();
 	r += fabs(float(b.getattractiveness() - g.getattractiveness()));
 	r += fabs(float(b.getintelligence() - g.getintelligence()));
+	this->compat = r;
 	return r;
 }

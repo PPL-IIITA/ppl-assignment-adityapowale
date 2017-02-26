@@ -24,7 +24,7 @@ Gift::Gift()
     this->gifted = false;
 }
 
-Gift::Gift(std::string name, GiftType type, int price, int value)
+Gift::Gift(std::string name, int type, int price, int value)
 {
     this->name   = name;
     this->type   = type;

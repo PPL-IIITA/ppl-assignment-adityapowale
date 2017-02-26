@@ -4,6 +4,7 @@
 #include "girl.h"
 #include "gift.h"
 #include <string>
+#include <vector>
 
 class Couple
 {
@@ -12,11 +13,17 @@ class Couple
 		Girl g;
 		Couple();
 		Couple(Boy *,Girl *);
-		Gift gi[100];
+		std::vector<Gift> gifts;
 		float spend;
-		void savegifts(Gift *,int );
+		void savegifts(std::vector<Gift> &gi);
 		void setspend(float);
 		float gethappiness();
 		float getcompatibility();
+		float happy;
+		float compat;
 };
+
+bool compareOnHappy(Couple,Couple);
+bool compareOnCompat(Couple,Couple);
+
 #endif

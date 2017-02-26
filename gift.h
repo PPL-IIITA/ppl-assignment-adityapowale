@@ -3,23 +3,17 @@
 
 #include <iostream>
 
-enum GiftType {
-    essential,
-    luxury,
-    utility
-};
-
 class Gift
 {
 public:
     std::string name;
-    GiftType type;
+    int type;
     int price;
     int value;
     bool gifted;
 
     Gift();
-    Gift(std::string name, GiftType type, int price, int value);
+    Gift(std::string name, int type, int price, int value);
 };
 
 
