@@ -1,6 +1,10 @@
 #include "boy.h"
 #include <string>
 
+Boy::Boy()
+{
+}
+
 Boy::Boy(std::string name, int attractiveness, int intelligence, float budget, int min_req,int type)
 {
 	this->name = name;
@@ -12,9 +16,12 @@ Boy::Boy(std::string name, int attractiveness, int intelligence, float budget, i
 	this->type = type;
 }
 
-void Boy::setstatus()
+void Boy::setstatus(int i)
 {
-	this->status = 'C';
+	if (i == 1)
+		this->status = 'C';
+	else if(i == 0)
+		this->status = 'N';
 }
 
 bool Boy::getstatus()
@@ -48,4 +55,9 @@ float Boy::getbudget()
 int Boy::gettype()
 {
 	return this->type;
+}
+
+int Boy::getminatt()
+{
+	return this->min_attractive_req;
 }

@@ -24,13 +24,13 @@ void rand_test::generate(int n,int m)  {
 
 	for (int i = 0; i < n; i++) {
 
-		name = "Boy"+to_string(i+1);
+		name = "Boy" + std::to_string(i+1);
 		budget = 10*getRand();
 		attractiveness = getRand();
 		intelligence = getRand();
 		type = getRand()%3;
 		min_req = getRand();
-		myfile<<name<<";"<<attractiveness<<";"<<budget<<";"<<intelligence<<";"<<type<<";"<<min_req<<"\n";
+		myfile<<name<<" , "<<attractiveness<<" , "<<intelligence<<" , "<<budget<<" , "<<type<<" , "<<min_req<<"\n";
 
 
 	}
@@ -41,14 +41,14 @@ void rand_test::generate(int n,int m)  {
 
 	for (int i = 0; i < m; i++) {
 
-		name = "Girl"+to_string(i+1);
+		name = "Girl"+ std::to_string(i+1);
 		attractiveness = getRand();
 		budget = 10*getRand();
 		intelligence = getRand();
 		type = getRand()%3;
 		pre = getRand()%3;
 
-		myfile<<name<<";"<<attractiveness<<";"<<budget<<";"<<intelligence<<";"<<type<<";"<<pre<<"\n";
+		myfile<<name<<" , "<<attractiveness<<" , "<<intelligence<<" , "<<budget<<" , "<<type<<" , "<<pre<<"\n";
 
 
 

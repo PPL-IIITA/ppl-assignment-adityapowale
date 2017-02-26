@@ -19,13 +19,15 @@ class Boy
 
 	//functions//
 	public:
+		Boy();
 		Boy(std::string name, int attractiveness, int intelligence, float budget, int min_req, int type);
 		std::string getname();
 		int getattractiveness();
 		int getintelligence();
 		float getbudget();
 		bool getstatus();
-		void setstatus();
+		void setstatus(int i);
 		int gettype();
+		int getminatt();
 };
 #endif

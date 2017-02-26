@@ -24,7 +24,8 @@ class Girl
 		int getintelligence();
 		float getmaintainance_budget();
 		bool getstatus();
-		void setstatus();
+		void setstatus(int i);
+		int getbfcriterion();
 		int gettype();
 };
 #endif

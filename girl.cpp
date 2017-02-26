@@ -12,9 +12,12 @@ Girl::Girl(std::string name, int attractiveness, int intelligence, float budget,
 	this->type = type;
 }
 
-void Girl::setstatus()
+void Girl::setstatus(int i)
 {
-	this->status = 'C';
+	if (i == 1)
+		this->status = 'C';
+	else if(i == 0)
+		this->status = 'N';
 }
 
 bool Girl::getstatus()
@@ -48,4 +51,9 @@ std::string Girl::getname()
 int Girl::gettype()
 {
 	return this->type;
+}
+
+int Girl::getbfcriterion()
+{
+	return this->bfcriterion;
 }
