@@ -1,7 +1,7 @@
-#include "choosy_girl.h"
+#include "girl.h"
 #include <string.h>
 
-Choosy_Girl::Choosy_Girl(std::string name, int attractiveness, int intelligence, float budget, std::string criteria)
+Girl::Girl(std::string name, int attractiveness, int intelligence, float budget, std::string criteria, int type)
 {
 	this->name = name;
 	this->attractiveness = attractiveness;
@@ -9,14 +9,15 @@ Choosy_Girl::Choosy_Girl(std::string name, int attractiveness, int intelligence,
 	this->maintainance = budget;
 	this->bfcriterion = criteria;
 	this->status = 'N';
+	this->type = type;
 }
 
-void Choosy_Girl::setstatus()
+void Girl::setstatus()
 {
 	this->status = 'C';
 }
 
-bool Choosy_Girl::getstatus()
+bool Girl::getstatus()
 {
 	if(status == 'N')
 		return false;
@@ -24,22 +25,27 @@ bool Choosy_Girl::getstatus()
 		return true;
 }
 
-int Choosy_Girl::getattractiveness()
+int Girl::getattractiveness()
 {
 	return this->attractiveness;
 }
 
-int Choosy_Girl::getintelligence()
+int Girl::getintelligence()
 {
 	return this->intelligence;
 }
 
-float Choosy_Girl::getmaintainance_budget()
+float Girl::getmaintainance_budget()
 {
 	return this->maintainance;
 }
 
-std::string Choosy_Girl::getname()
+std::string Girl::getname()
 {
 	return this->name;
+}
+
+int Girl::gettype()
+{
+	return this->type;
 }

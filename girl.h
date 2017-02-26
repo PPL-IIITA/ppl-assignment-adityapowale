@@ -1,9 +1,9 @@
-#ifndef DESPERATEGIRL_H
-#define DESPERATEGIRL_H
+#ifndef GIRL_H
+#define GIRL_H
 
 #include <string>
 
-class Desperate_Girl
+class Girl
 {
 	//atrributes//
 	private:
@@ -14,15 +14,17 @@ class Desperate_Girl
 		char status;
 		std::string bfname;
 		std::string bfcriterion;
+		int type;
 
-	//funtions//
+	//functions//
 	public:
-		Desperate_Girl(std::string name, int attractiveness, int intelligence, float maintainance_budget, std::string criterion);
+		Girl(std::string name, int attractiveness, int intelligence, float budget, std::string criterion, int type);
 		std::string getname();
 		int getattractiveness();
 		int getintelligence();
 		float getmaintainance_budget();
 		bool getstatus();
 		void setstatus();
+		int gettype();
 };
 #endif

@@ -1,7 +1,7 @@
-#include "miser_boy.h"
+#include "boy.h"
 #include <string>
 
-Miser_Boy::Miser_Boy(std::string name, int attractiveness, int intelligence, float budget, int min_req)
+Boy::Boy(std::string name, int attractiveness, int intelligence, float budget, int min_req,int type)
 {
 	this->name = name;
 	this->attractiveness = attractiveness;
@@ -9,14 +9,15 @@ Miser_Boy::Miser_Boy(std::string name, int attractiveness, int intelligence, flo
 	this->budget = budget;
 	this->min_attractive_req = min_req;
 	this->status = 'N';
+	this->type = type;
 }
 
-void Miser_Boy::setstatus()
+void Boy::setstatus()
 {
 	this->status = 'C';
 }
 
-bool Miser_Boy::getstatus()
+bool Boy::getstatus()
 {
 	if(status == 'N')
 		return false;
@@ -24,22 +25,27 @@ bool Miser_Boy::getstatus()
 		return true;
 }
 
-std::string Miser_Boy::getname()
+std::string Boy::getname()
 {
 	return name;
 }
 
-int Miser_Boy::getintelligence()
+int Boy::getintelligence()
 {
 	return this->intelligence;
 }
 
-int Miser_Boy::getattractiveness()
+int Boy::getattractiveness()
 {
 	return this->attractiveness;
 }
 
-float Miser_Boy::getbudget()
+float Boy::getbudget()
 {
 	return this->budget;
+}
+
+int Boy::gettype()
+{
+	return this->type;
 }

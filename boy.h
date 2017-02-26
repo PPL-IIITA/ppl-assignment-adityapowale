@@ -1,9 +1,9 @@
-#ifndef MISERBOY_H
-#define MISERBOY_H
+#ifndef BOY_H
+#define BOY_H
 
 #include <string>
 
-class Miser_Boy
+class Boy
 {
 	//atrributes//
 	private:
@@ -14,15 +14,18 @@ class Miser_Boy
 		int min_attractive_req;
 		char status;
 		std::string gfname;
+		std::string nature;
+		int type;
 
 	//functions//
 	public:
-		Miser_Boy(std::string name, int attractiveness, int intelligence, float budget,int min_req);
+		Boy(std::string name, int attractiveness, int intelligence, float budget, int min_req, int type);
 		std::string getname();
 		int getattractiveness();
 		int getintelligence();
 		float getbudget();
 		bool getstatus();
 		void setstatus();
+		int gettype();
 };
 #endif
