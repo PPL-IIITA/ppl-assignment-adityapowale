@@ -15,6 +15,11 @@ Implemented question 1 and question 2 in c++.
 UBUNTU 16.04
 ```
 
+###REQUIREMENTS
+```
+C++ Complier must support c++11 or above.
+```
+
 ##HOW TO COMPILE:
 
 ###To compile QUESTION 1 execute following command:
