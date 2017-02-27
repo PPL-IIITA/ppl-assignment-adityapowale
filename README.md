@@ -20,7 +20,7 @@ UBUNTU 16.04
 ```
 
 ###DOCUMENTATION
-* [CLICK HERE] FOR DOCUMENTATION(https://github.com/PPL-IIITA/ppl-assignment-adityapowale.git)
+* [CLICK HERE](https://github.com/PPL-IIITA/ppl-assignment-adityapowale.git) FOR DOCUMENTATION
 
 ###REQUIREMENTS
 ```
