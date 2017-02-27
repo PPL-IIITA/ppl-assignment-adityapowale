@@ -5,11 +5,12 @@
 #include "input.h"
 #include "gift.h"
 
+#include <cstdlib>
 #include <vector>
 #include <iostream>
 
 
-int main(int argc,int **argv)
+int main(int argc,char **argv)
 {
 	int bo = atoi(argv[1]);
 	int gir = atoi(argv[2]);

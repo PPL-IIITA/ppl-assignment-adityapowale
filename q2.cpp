@@ -22,7 +22,9 @@ int main(int argc,char **argv)
 	getinput(b,g,c,gi);
 	std::vector<Couple>::iterator it1;
 	std::vector<Gift>::iterator it2,it3;
+	cout<<endl;
 	cout<<"GIFTS EXCHANGED "<<endl;
+	cout<<endl;
 	for(it1 = c.begin() ; it1 != c.end() ; it1++) {
 		float temp = 0 , expense = 0;
 		std::vector<Gift> gifts;
@@ -60,7 +62,6 @@ int main(int argc,char **argv)
 	for(j = 0 ; j < k ; j++) {
 		cout<<c[j].g.getname()<<" and "<<c[j].b.getname()<< " Happiness = "<<c[j].happy<<endl;
 	}
-	cout<<endl;
 	cout<<endl;
 	std::sort(c.begin(),c.end(),compareOnCompat);
 	cout<<"K Most Compatible couples"<<endl;

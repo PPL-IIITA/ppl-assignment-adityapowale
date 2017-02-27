@@ -67,6 +67,7 @@ void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c 
 	for(i2 = g.begin() ; i2 != g.end() ; i2++) {
 
 		Boy temp;
+		int flag = 0;
 		if(i2->getbfcriterion() == 0) {
 			for(i1 = b.begin() ; i1 != b.end() ; i1++) {
 				if((i2->getmaintainance_budget() < i1->getbudget()) && (i1->getstatus() == false) && (i1->getminatt() < i2->getattractiveness())) {
@@ -74,11 +75,13 @@ void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c 
 						i2->setstatus(1);
 						i1->setstatus(1);
 						temp = *i1;
+						flag = 1;
 					}
 					else if(temp.getattractiveness() < i1->getattractiveness()) {
 						temp.setstatus(0);
 						i1->setstatus(1);
 						temp = *i1;
+						flag = 1;
 					}
 				}
 			}
@@ -90,11 +93,13 @@ void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c 
 						i2->setstatus(1);
 						i1->setstatus(1);
 						temp = *i1;
+						flag = 1;
 					}
 					else if(temp.getintelligence() < i1->getintelligence()) {
 						temp.setstatus(0);
 						i1->setstatus(1);
 						temp = *i1;
+						flag = 1;
 					}
 				}
 			}
@@ -106,15 +111,19 @@ void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c 
 						i2->setstatus(1);
 						i1->setstatus(1);
 						temp = *i1;
+						flag = 1;
 					}
 					else if(temp.getbudget() < i1->getbudget()) {
 						temp.setstatus(0);
 						i1->setstatus(1);
 						temp = *i1;
+						flag = 1;
 					}
 				}
 			}
 		}
+		if(flag == 0)
+			continue;
 		Couple c1(&temp,&(*i2));
 		c.push_back(c1);
 		std::cout << i2->getname() <<" " << temp.getname() << std::endl;
