@@ -1,0 +1,8 @@
+<map id="Couple::getcompatibility" name="Couple::getcompatibility">
+<area shape="rect" id="node2" href="$class_boy.html#ac8f929e9a2d9975f71c9d1b7fdee5395" title="Boy::getbudget" alt="" coords="237,5,348,32"/>
+<area shape="rect" id="node3" href="$class_girl.html#a7a577d06b5b0f8c579252c96f945ce17" title="Girl::getmaintainance\l_budget" alt="" coords="220,57,365,98"/>
+<area shape="rect" id="node4" href="$class_boy.html#a351ba6eec4af8d6ec397710946cc0258" title="Boy::getattractiveness" alt="" coords="216,123,369,149"/>
+<area shape="rect" id="node5" href="$class_girl.html#afa04499a5421d968ec83e2649f4b1090" title="Girl::getattractiveness" alt="" coords="217,173,368,200"/>
+<area shape="rect" id="node6" href="$class_boy.html#af6f763887bddcdf55340db92c470282e" title="Boy::getintelligence" alt="" coords="225,224,361,251"/>
+<area shape="rect" id="node7" href="$class_girl.html#a11b2058b29cc501c3b7da3ebbe2ff17f" title="Girl::getintelligence" alt="" coords="226,275,359,301"/>
+</map>

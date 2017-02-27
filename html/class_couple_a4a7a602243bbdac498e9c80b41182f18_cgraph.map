@@ -1,0 +1,6 @@
+<map id="Couple::gethappiness" name="Couple::gethappiness">
+<area shape="rect" id="node2" href="$class_girl.html#ad62d507423076c032b7d8eb7bb9baa16" title="Girl::gettype" alt="" coords="221,5,315,32"/>
+<area shape="rect" id="node3" href="$class_boy.html#a34baf659baf3835ecb3381c9db490965" title="Boy::gettype" alt="" coords="220,56,316,83"/>
+<area shape="rect" id="node4" href="$class_boy.html#ac8f929e9a2d9975f71c9d1b7fdee5395" title="Boy::getbudget" alt="" coords="213,107,323,133"/>
+<area shape="rect" id="node5" href="$class_girl.html#a11b2058b29cc501c3b7da3ebbe2ff17f" title="Girl::getintelligence" alt="" coords="201,157,335,184"/>
+</map>
