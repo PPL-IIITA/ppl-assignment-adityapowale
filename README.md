@@ -48,5 +48,5 @@ random data will be generated everytime q1 is executed
 
 ###bugs
 ```
-sometimes in q2 bad:alloc error thrown
+sometimes in q2 "bad:alloc" error thrown
 ```
