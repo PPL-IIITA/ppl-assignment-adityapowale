@@ -10,16 +10,22 @@
 
 Implemented question 1 and question 2 in c++.
 
+###Language
+```
+c++
+```
 ##OPERATING SYSTEM
 ```
 UBUNTU 16.04
 ```
 
+###DOCUMENTATION
+*[CLICK HERE] FOR DOCUMENTATION(https://github.com/PPL-IIITA/ppl-assignment-adityapowale.git)
+
 ###REQUIREMENTS
 ```
 C++ Complier must support c++11 or above.
 ```
-
 ##HOW TO COMPILE:
 
 ###To compile QUESTION 1 execute following command:
