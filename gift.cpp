@@ -21,7 +21,6 @@ bool compareOnPriceDesc (Gift g1, Gift g2)
 
 Gift::Gift()
 {
-    this->gifted = false;
 }
 
 Gift::Gift(std::string name, int type, int price, int value)
@@ -30,5 +29,4 @@ Gift::Gift(std::string name, int type, int price, int value)
     this->type   = type;
     this->price  = price;
     this->value  = value;
-    this->gifted = false;
 }

@@ -8,6 +8,6 @@
 #include "couple.h"
 #include "gift.h"
 
-void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c, std::vector<Gift> &gi);
+void getinput(std::vector<Boy> &b, std::vector<Girl> &g, std::vector<Couple> &c, std::vector<Gift> &gi);/* !< Takes inputs and makes couples*/
 
 #endif

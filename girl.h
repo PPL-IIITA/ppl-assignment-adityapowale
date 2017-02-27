@@ -7,26 +7,43 @@ class Girl
 {
 	//atrributes//
 	private:
-		std::string name;
-		int attractiveness;
-		int intelligence;
-		float maintainance;
-		char status;
-		std::string bfname;
-		int bfcriterion;
-		int type;
+		std::string name;/*!< Girl's name*/
+		int attractiveness;/*!< attractiveness*/
+
+		int intelligence;/*!< intelligence*/
+
+		float maintainance;/*!< maintainance budget*/
+
+		char status;/*!< status*/
+
+		std::string bfname;/*!< */
+
+		int bfcriterion;/*!< criteria for choosing bf*/
+
+		int type;/*!< type of girl*/
+
 
 	//functions//
 	public:
-		Girl();
-		Girl(std::string name, int attractiveness, int intelligence, float budget, int criterion, int type);
-		std::string getname();
-		int getattractiveness();
-		int getintelligence();
-		float getmaintainance_budget();
-		bool getstatus();
-		void setstatus(int i);
-		int getbfcriterion();
-		int gettype();
+		Girl();/*!< default constructor*/
+
+		Girl(std::string name, int attractiveness, int intelligence, float budget, int criterion, int type);/*!< constructor*/
+
+		std::string getname();/*!< returns name*/
+
+		int getattractiveness();/*!< returns attractiveness*/
+
+		int getintelligence();/*!< returns intelligence*/
+
+		float getmaintainance_budget();/*!< returns maintainance budget*/
+
+		bool getstatus();/*!< returns status*/
+
+		void setstatus(int i);/*!< sets status*/
+
+		int getbfcriterion();/*!< returns criteria for choosing bf*/
+
+		int gettype();/*!< returns type*/
+
 };
 #endif

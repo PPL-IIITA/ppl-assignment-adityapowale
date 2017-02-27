@@ -6,19 +6,27 @@
 class Gift
 {
 public:
-    std::string name;
-    int type;
-    int price;
-    int value;
-    bool gifted;
+    std::string name;/*!< name of gift*/
 
-    Gift();
-    Gift(std::string name, int type, int price, int value);
+    int type;/*!< type of gift*/
+
+    int price;/*!< price of gift*/
+
+    int value;/*!< value of gift*/
+
+
+    Gift();/*!< default constructor*/
+
+    Gift(std::string name, int type, int price, int value);/*!< constructor*/
+
 };
 
 
-bool compareOnValue (Gift g1, Gift g2);
-bool compareOnPriceAsc (Gift g1, Gift g2);
-bool compareOnPriceDesc (Gift g1, Gift g2);
+bool compareOnValue (Gift g1, Gift g2);/*!< utility fuction for sorting*/
+
+bool compareOnPriceAsc (Gift g1, Gift g2);/*!< utility fuction for sorting*/
+
+bool compareOnPriceDesc (Gift g1, Gift g2);/*!< utility fuction for sorting*/
+
 
 #endif

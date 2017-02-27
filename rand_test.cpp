@@ -25,7 +25,7 @@ void rand_test::generate(int n,int m)  {
 	for (int i = 0; i < n; i++) {
 
 		name = "Boy" + std::to_string(i+1);
-		budget = 10*getRand();
+		budget = 5*getRand();
 		attractiveness = getRand();
 		intelligence = getRand();
 		type = getRand()%3;
@@ -62,7 +62,11 @@ void rand_test::generate(int n,int m)  {
 		name = "Gift"+ std::to_string(i+1);
 		type = getRand()%3;
 		budget = getRand();
+		if(budget < 30)
+			budget += 50;
 		intelligence = getRand();
+		if(intelligence < 30) 
+			intelligence += 50;
 
 		myfile<<name<<" , "<<type<<" , "<<intelligence<<" , "<<budget<<"\n";
 
