@@ -18,7 +18,7 @@ int main(int argc,char **argv)
 	std::vector<Girl> g;
 	std::vector<Couple> c;
 	std::vector<Gift> gi;
-	int k = atoi(argv[1]);
+	int k = atoi(argv[3]);
 	getinput(b,g,c,gi);
 	std::vector<Couple>::iterator it1;
 	std::vector<Gift>::iterator it2,it3;
