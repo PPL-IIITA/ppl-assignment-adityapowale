@@ -1,0 +1,1 @@
+g++ q5.cpp boy.cpp girl.cpp input1.cpp rand_test.cpp gift.cpp couple.cpp  -std=c++11

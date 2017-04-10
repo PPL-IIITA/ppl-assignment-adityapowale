@@ -74,7 +74,4 @@ void rand_test::generate(int n,int m)  {
 
 	}
 	myfile.close();
-
-
-
 }

@@ -15,6 +15,11 @@ bool compareOnHappy(Couple c1 , Couple c2)
 	return (c1.happy > c2.happy);
 }
 
+bool compareOnHappyd(Couple c1 , Couple c2)
+{
+	return (c1.happy < c2.happy);
+}
+
 bool compareOnCompat(Couple c1 , Couple c2)
 {
 	return (c1.compat > c2.compat);

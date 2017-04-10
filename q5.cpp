@@ -2,7 +2,7 @@
 #include "girl.h"
 #include "couple.h"
 #include "rand_test.h"
-#include "input.h"
+#include "input1.h"
 #include "gift.h"
 
 #include <algorithm>
@@ -19,7 +19,7 @@ int main(int argc,char **argv)
 	std::vector<Couple> c;
 	std::vector<Gift> gi;
 	int k = atoi(argv[1]);
-	getinput(b,g,c,gi);
+	getinput1(b,g,c,gi);
 	std::vector<Couple>::iterator it1;
 	std::vector<Gift>::iterator it2,it3;
 	cout<<endl;
@@ -60,13 +60,8 @@ int main(int argc,char **argv)
 	cout<<"K Happiest Couples are"<<endl;
 	int j;
 	for(j = 0 ; j < k ; j++) {
-		cout<<c[j].g.getname()<<" and "<<c[j].b.getname()<< " Happiness = "<<c[j].happy<<endl;
+		cout<<c[j].b.getname()<<" and "<<c[j].g.getname()<< " Happiness = "<<c[j].happy<<endl;
 	}
 	cout<<endl;
-	std::sort(c.begin(),c.end(),compareOnCompat);
-	cout<<"K Most Compatible couples"<<endl;
-	for(j = 0 ; j < k ; j++) {
-		cout<<c[j].g.getname()<<" and "<<c[j].b.getname()<< " Happiness = "<<c[j].compat<<endl;
-	}
 	return 0;
 }

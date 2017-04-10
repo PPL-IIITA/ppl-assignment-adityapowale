@@ -36,6 +36,7 @@ class Couple
 };
 
 bool compareOnHappy(Couple,Couple);/*!< funtion to compare happiness used for sorting*/
+bool compareOnHappyd(Couple,Couple);/*!< funtion to compare happiness used for sorting descending*/
 
 bool compareOnCompat(Couple,Couple);/*!< function to compare compatibility used for sorting*/
 
